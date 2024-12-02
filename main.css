@@ -1,128 +1,214 @@
-/* Organizers Section */
-.organizers-container {
-    max-width: 800px;       
-    margin: 0 auto;          
-    padding: 20px;          
-    text-align: left;        
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Chairs Section */
-.chairs-container {
-    max-width: 800px;
-    margin: 0 auto;
+
+
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden; /* Ensures that no part of the image overflows */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%; /* Ensures the image covers the full height of the section */
+    object-fit: cover; /* Ensures the image covers the section without distortion */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%; /* Centers text vertically */
+    left: 50%; /* Centers text horizontally */
+    transform: translate(-50%, -50%); /* Adjusts for perfect centering */
+    text-align: center; /* Centers text within the div */
+    color: white; /* Makes text white for visibility */
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.hero-text h1 {
+    font-size: 36px; /* Adjust size as needed */
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Ensure the same font family */
+}
+
+/* Dark Overlay */
+.hero-section::before {
+    content: ''; /* Empty content for the overlay */
+    position: absolute; /* Position overlay above the image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+    z-index: 0; /* Keeps the overlay below the text but above the image */
+}
+
+
+
+/* Organizers container */
+.organizers-container {
+    width: 100%;
     padding: 20px;
+    background-color: #fff;
     text-align: left;
 }
 
-/* Category Styling */
-.chairs-category {
+.organizers-container h2 {
+    font-size: 28px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-align: left;  /* Aligns header to the left */
+    padding-left: 20px; /* Adds some padding to the left edge */
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-weight: 800; 
+
+}
+
+/* General styling for the chairs container */
+.chairs {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start;     /* Align items to the top */
+    gap: 80px; /* Space between each item */
+    flex-wrap: wrap;  /* Allows items to wrap if screen size is small */
+    padding-left: 20px; /* Optional: adds some padding to the left side */
+}
+
+/* Individual chair container */
+.chair {
+    text-align: center; /* Centers the content */
+    position: relative; /* Needed for absolute positioning of name */
+    display: inline-block; /* Ensures the container is tightly wrapping the image */
     margin-bottom: 30px;
 }
 
-/* Heading Styling */
-.chairs-category h3 {
-    font-size: 1.4em;
-    border-left: 4px solid #b41a3ec3;
-    padding-left: 10px;
-    color: #333;
-    text-align: left; /* Left align the heading */
+
+/* Styling for each chair item */
+.chairs img {
+    width: 200px; /* Ensures all images are the same size */
+    height: 200px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;  /* Ensures the image covers the circle area */
 }
 
-/* Paragraph Styling */
+/* Ensuring names below each image are aligned */
 .chairs p {
-    font-size: 1.1em;
-    padding-left: 10px;
-    color: #555;
-    text-align: left; /* Left align the paragraph */
-    line-height: 1.5; /* Adjust line spacing */
-    margin: 10px 0; /* Add consistent spacing between paragraphs */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px; /* Adds space between image and text */
+    width: 200px; /* Same width as images for consistent alignment */
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+
 }
 
+/* Category header style */
 
-/* General Heading and Paragraph Styles */
-h1, h3 {
-    margin: 0 0 20px;
-    color: #333;
+.chairs-category h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: left;  /* Aligns header to the left */
+    padding-left: 20px; /* Adds some padding to the left edge */
+    font-family: 'Poppins', sans-serif;
+    color: rgb(37, 37, 197);
+    font-weight: 600; 
 }
 
-h2 {
-    text-align: left; 
-    padding-left: 10px; 
-    color: #333; 
-    font-size: 1.6em;
-    margin-bottom: 20px; 
+/* Footer Styling */
+
+.footer {
+    position: relative; /* Enables positioning of content inside the footer */
+    height: 250px; /* Fixed height for footer */
+    width: 100vw; /* Ensures the footer spans the full width */
+    text-align: center; /* Centers the text horizontally */
+    overflow: hidden; /* Prevents content from spilling outside the footer */
+    z-index: 1; /* Places the image behind the overlay and text */
+
 }
 
-p {
-    font-size: 1.1em;
-    text-align: justify;
-    margin: 15px 0;
+.footer img {
+    width: 100%; /* Ensures the image spans the full width of the footer */
+    min-height: 100%; /* Ensures the image fills the footer's height without leaving gaps */
+    object-fit: cover; /* Ensures the entire image fits within the footer without cropping */
+    position: absolute; /* Positions the image inside the footer */
+    top: 0; /* Aligns the image to the top of the footer */
+    left: 0; /* Aligns the image to the left of the footer */
+    z-index: -2; /* Places the image behind the overlay and text */
 }
 
-/* Utility Class for Clearfix */
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+.footer-overlay {
+    position: absolute; /* Positions the overlay on top of the image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent dark background */
+    z-index: -1; /* Places the overlay between the image and text */
 }
 
-/* Responsive Styles */
+.footer-content {
+    position: relative; /* Ensures the text stays above the overlay and image */
+    color: white; /* Text color for better contrast */
+    font-size: 16px; /* Adjust text size as needed */
+    padding: 20px; /* Adds spacing around the text */
+    display: inline-block; /* Prevents the text background from spanning the entire width */
+    border-radius: 5px; /* Optional: Adds rounded corners to the text background */
+    max-width: 90%; /* Keeps the text block's width manageable */
+    margin: 0 auto; /* Centers the text block */
+    z-index: 1; /* Ensures the text stays on top of the overlay */
+    font-weight: 600; 
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* Dark Overlay */
+.footer::before {
+    content: ''; /* Empty content for the overlay */
+    position: absolute; /* Position overlay above the image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+    z-index: 0; /* Keeps the overlay below the text but above the image */
+}
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
-    /* Adjust container padding and text alignment for smaller screens */
-    .organizers-container,
-    .chairs-container {
-        padding: 10px;         /* Reduce padding */
-        text-align: center;    /* Center align text on small screens */
+    .footer {
+        height: 150px; /* Adjust height for smaller screens */
     }
 
-    /* Reduce heading font sizes on small screens */
-    .chairs-category h3 {
-        font-size: 1.2em;      /* Smaller font size for headings */
-    }
-
-    h2 {
-        font-size: 1.4em;      /* Adjust h2 size */
-    }
-
-    /* Adjust paragraph styling for better readability on small screens */
-    .chairs p,
-    p {
-        font-size: 1em;        /* Slightly smaller font size */
-        text-align: justify;   /* Ensure paragraphs are justified */
-        padding-left: 0;       /* Remove padding on small screens */
-    }
-
-    /* Reduce margin for compact layout */
-    .chairs-category,
-    p {
-        margin: 10px 0;        /* Smaller margins */
-    }
-
-    /* Adjust heading margins */
-    h1, h3 {
-        margin: 0 0 15px;      /* Adjust heading margins */
+    .footer-content {
+        font-size: 14px; /* Adjust text size */
+        padding: 15px; /* Adjust padding */
     }
 }
 
-/* Responsive Styles for very small devices (e.g., phones) */
 @media (max-width: 480px) {
-    /* Further reduce font size and margins on very small screens */
-    .chairs-category h3 {
-        font-size: 1.1em;      /* Even smaller heading size */
+    .footer {
+        height: 120px; /* Further adjust height for extra small screens */
     }
 
-    h2 {
-        font-size: 1.2em;      /* Smaller font size for h2 */
-    }
-
-    p {
-        font-size: 0.9em;      /* Smaller font for paragraphs */
-        margin: 10px 0;        /* Adjust paragraph margin */
-    }
-
-    /* Adjust container padding for very small screens */
-    .organizers-container,
-    .chairs-container {
-        padding: 5px;          /* Further reduce padding */
+    .footer-content {
+        font-size: 12px; /* Smaller text size */
+        padding: 10px; /* Smaller padding */
     }
 }
