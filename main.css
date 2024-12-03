@@ -105,6 +105,8 @@ body {
     height: 200px;
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover;  /* Ensures the image covers the circle area */
+    object-position: 50% 10%; /* Positions the image in the center */
+
 }
 
 /* Ensuring names below each image are aligned */
