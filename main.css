@@ -7,6 +7,8 @@ body {
     width: 100%;
     background-color: #f4f4f4;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box;
+
 }
 
 
@@ -63,10 +65,14 @@ body {
 /* Organizers container */
 .organizers-container {
     width: 100%;
-    padding: 20px;
     background-color: #fff;
-    text-align: left;
+    text-align: center; /* Centers the text horizontally */
+    display: flex; /* Enables flexbox for centering */
+    flex-direction: column; /* Stacks the content vertically */
+    justify-content: center; /* Vertically centers content within the container */
+    align-items: center; /* Horizontally centers content within the container */
 }
+
 
 .organizers-container h2 {
     font-size: 28px;
@@ -138,8 +144,8 @@ body {
 
 .footer {
     position: relative; /* Enables positioning of content inside the footer */
-    height: 250px; /* Fixed height for footer */
-    width: 100vw; /* Ensures the footer spans the full width */
+    height: 350px; /* Fixed height for footer */
+    width: 100%; /* Ensures the footer spans the full width */
     text-align: center; /* Centers the text horizontally */
     overflow: hidden; /* Prevents content from spilling outside the footer */
     z-index: 1; /* Places the image behind the overlay and text */
