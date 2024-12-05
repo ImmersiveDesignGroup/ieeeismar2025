@@ -11,7 +11,7 @@ body {
 
 }
 
-
+/* Committee Page Styling */
 
 /* Hero Section Styling */
 .hero-section {
@@ -220,5 +220,271 @@ body {
     .footer-content {
         font-size: 12px; /* Smaller text size */
         padding: 10px; /* Smaller padding */
+    }
+}
+
+
+/* Sponsors Page Styling */
+
+h1, h2 {
+    font-weight: bold;
+    color: #1e1e1e;
+}
+
+/* Sponsorship Container */
+.sponsorship-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Style */
+.sponsorship-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sponsorship-header h1 {
+    font-size: 36px;
+    color: rgb(37, 37, 197);
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* Content Section Style */
+.sponsorship-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: rgb(37, 37, 197);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+}
+
+.section h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: rgb(37, 37, 197);
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.bar-chart-img {
+    width: 80%; /* Makes the image responsive */
+    max-width: 600px; /* Optional: ensures the image doesn't get too large */
+    height: auto;
+    margin-top: 20px; /* Adds space between the heading and the image */
+    margin-bottom: 20px;
+}
+
+.exhibitor-info {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+
+}
+
+.exhibitor-info h2 {
+    color: rgb(37, 37, 197);
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 600;
+
+}
+
+.exhibitor-info ul {
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.exhibitor-info ul ul {
+    list-style-type: circle;
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.exhibitor-info li {
+    margin-bottom: 10px;
+}
+
+
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    background: white;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+table thead th {
+    background-color: #2525C5; /* RGB: 37, 37, 197 */
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+table tbody td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    thead tr {
+        display: none;
+    }
+    
+    tbody tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        background: white;
+    }
+    
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        text-align: right;
+        font-size: 14px;
+    }
+    
+    tbody td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-align: left;
+        padding-right: 10px;
+    }
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.section a {
+    color: #1e7a8a;
+    text-decoration: none;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}
+
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+    gap: 20px;
+    justify-items: center;
+    
+}
+
+.sponsors-grid img {
+    max-width: 200px; /* Adjust the size of the logos */
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.sponsors-grid img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .sponsors-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+
+    .sponsors-grid img {
+        max-width: 200px; /* Smaller logo size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsors-grid {
+        grid-template-columns: 1fr; /* Stacks logos vertically */
+    }
+
+    .sponsors-grid img {
+        max-width: 120px; /* Further reduce logo size on very small screens */
+    }
+}
+
+/* Footer Style */
+.footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .sponsorship-container {
+        padding: 15px;
+    }
+
+    .sponsorship-header h1 {
+        font-size: 28px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .section p {
+        font-size: 14px;
+    }
+
+    .section ul {
+        padding-left: 15px;
+        font-size: 14px;
+    }
+
+    .bar-chart-img {
+        max-width: 100%; /* Ensures image doesn't overflow */
     }
 }

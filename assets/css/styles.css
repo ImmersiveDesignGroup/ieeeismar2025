@@ -45,8 +45,8 @@ body {
 
 /* Logo Styling */
 .logo {
-    width: 180px;
-    height: 50px;
+    width: 200px;
+    height: 70px;
    /* height: 50px;            /* Set a height for the logo */
     margin-right: 570px;      /* Add space between logo and navigation */
     /*display: inline-block;   /* Make sure the logo stays inline */
@@ -55,8 +55,8 @@ body {
 /* Responsive Styles for Smaller Screens */
 @media (max-width: 768px) {
     .logo {
-        width: 197.4px;
-        height: 48px;
+        width: 200px;
+        height: 70px;
        /* height: 40px;        /* Reduce the logo height slightly for smaller screens */
         margin-right: 0;     /* Remove the large right margin on smaller screens */
     }
