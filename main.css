@@ -93,7 +93,7 @@ body {
     display: flex;
     justify-content: flex-start; /* Align items to the left */
     align-items: flex-start;     /* Align items to the top */
-    gap: 80px; /* Space between each item */
+    gap: 50px; /* Space between each item */
     flex-wrap: wrap;  /* Allows items to wrap if screen size is small */
     padding-left: 20px; /* Optional: adds some padding to the left side */
 }
@@ -104,6 +104,7 @@ body {
     position: relative; /* Needed for absolute positioning of name */
     display: inline-block; /* Ensures the container is tightly wrapping the image */
     margin-bottom: 30px;
+    width: 200px;
 }
 
 
@@ -140,6 +141,30 @@ body {
     font-family: 'Poppins', sans-serif;
     color: rgb(37, 37, 197);
     font-weight: 600; 
+}
+
+/* Media Queries */
+
+/* For smaller screens (e.g., tablets or small devices) */
+@media (max-width: 768px) {
+    .chairs {
+        gap: 0; /* Removes space between items on smaller devices */
+    }
+
+    .chair {
+        flex-basis: 50%; /* Keeps 2 items per row */
+    }
+}
+
+/* For very small screens (e.g., mobile devices) */
+@media (max-width: 480px) {
+    .chairs {
+        gap: 0; /* Removes space between items on smaller devices */
+    }
+
+    .chair {
+        flex-basis: 50%; /* Keeps 2 items per row */
+    }
 }
 
 /* Footer Styling */

@@ -45,8 +45,8 @@ body {
 
 /* Logo Styling */
 .logo {
-    width: 200px;
-    height: 70px;
+    width: 160px;
+    height: 48px;
    /* height: 50px;            /* Set a height for the logo */
     margin-right: 570px;      /* Add space between logo and navigation */
     /*display: inline-block;   /* Make sure the logo stays inline */
@@ -55,8 +55,8 @@ body {
 /* Responsive Styles for Smaller Screens */
 @media (max-width: 768px) {
     .logo {
-        width: 200px;
-        height: 70px;
+        width: 160px;
+        height: 48px;
        /* height: 40px;        /* Reduce the logo height slightly for smaller screens */
         margin-right: 0;     /* Remove the large right margin on smaller screens */
     }
@@ -101,22 +101,10 @@ nav ul li {
 }
 
 
-/* Main Content Styling */
-.main-content {
-    display: flex;             /* Use flexbox for centering */
-    flex-direction: column;    /* Stack items vertically */
-    align-items: center;       /* Center items horizontally */
-    justify-content: flex-start;   /* Center items vertically */
-    text-align: center;        /* Ensure text is centered */
-    padding: 20px;       /* Add padding for spacing */
-    box-sizing: border-box;    /* Ensure padding doesn't affect width */
-    min-height: calc(100vh - 140px); /* Full height minus header & footer */
-}
-
 /* Hero Section */
 .hero {
     position: relative; /* Allows positioning of child elements */
-    height: 100vh; /* Adjusted height to make the image smaller */
+    height: 70vh; /* Adjusted height to make the image smaller */
     width: 100vw; /* Ensure it stretches the full width */
     display: flex; /* Use flexbox for vertical and horizontal centering of the text */
     justify-content: center; /* Centers the content horizontally */
@@ -124,6 +112,7 @@ nav ul li {
     text-align: center; /* Centers the text */
     color: white; /* Makes the text white to contrast with the image */
     margin-top: 0; /* Ensure no extra margin from the top */
+    margin-bottom: 0; /* Ensure no extra margin from the bottom */
     padding: 0; /* Ensure no extra padding */
     z-index: 1; /* Keeps the text above the image */
 }
@@ -410,7 +399,7 @@ html, body {
     padding: 20px 0;
     /*background-color: #f8f8f8; /* Light background color for contrast */
     text-align: center;
-    margin-bottom: 40px; /* Add space between announcement and next section */
+    margin-bottom: 20px; /* Add space between announcement and next section */
     margin-top: 20px;
 }
 
