@@ -106,6 +106,8 @@ nav ul li {
     position: relative; /* Allows positioning of child elements */
     height: 70vh; /* Adjusted height to make the image smaller */
     width: 100vw; /* Ensure it stretches the full width */
+    min-height: 400px;
+    flex-direction: column; /* Stack content vertically */
     display: flex; /* Use flexbox for vertical and horizontal centering of the text */
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers the content vertically */
@@ -115,11 +117,13 @@ nav ul li {
     margin-bottom: 0; /* Ensure no extra margin from the bottom */
     padding: 0; /* Ensure no extra padding */
     z-index: 1; /* Keeps the text above the image */
+    overflow: hidden; /* Prevents the image from overflowing */
 }
 
 .hero-logo {
-    width: 200px;  /* Exact width */
-    height: 150px; /* Exact height */
+    width: 20vw; /* Responsive width (15% of the viewport width) */
+    max-width: 200px; /* Maximum size for larger screens */
+    height: auto; /* Maintain aspect ratio */
     display: block;
     margin: 20px auto; /* Center the logo */
 }
@@ -166,6 +170,7 @@ html, body {
     color: white; /* Ensures text is visible against the background */
     max-width: 900px; /* Limit width for larger screens */
     width: 100%; /* Ensure it’s responsive */
+    box-sizing: border-box;
 }
 
 
@@ -201,41 +206,87 @@ html, body {
 
 /* Responsive Styles */
 
-/* For screens smaller than 768px (tablets and small screens) */
-@media screen and (max-width: 768px) {
+/* For screens smaller than 1024px (medium devices) */
+@media screen and (max-width: 1024px) {
+    .hero {
+        height: 60vh; /* Adjust height for medium screens */
+    }
+
+    .hero-logo {
+        width: 25vw; /* Adjust logo width */
+        max-width: 150px;
+    }
+
     .hero .heading {
-        font-size: 2.5rem; /* Smaller heading */
+        font-size: 2.5rem;
     }
 
     .hero .subheading {
-        font-size: 1.2rem; /* Smaller subheading */
+        font-size: 1.2rem;
     }
 
     .hero .description {
-        font-size: 0.9rem; /* Smaller description */
+        font-size: 1rem;
     }
 
     .hero .content {
-        padding: 10px; /* Reduced padding */
+        padding-top: 30px; /* Add some space at the top */
+    }
+}
+
+/* For screens smaller than 768px (tablets and small devices) */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 50vh; /* Reduce height for smaller screens */
+    }
+
+    .hero-logo {
+        width: 30vw; /* Smaller logo width */
+        max-width: 120px;
+    }
+
+    .hero .heading {
+        font-size: 2rem;
+    }
+
+    .hero .subheading {
+        font-size: 1rem;
+    }
+
+    .hero .description {
+        font-size: 0.9rem;
+    }
+
+    .hero .content {
+        padding-top: 40px; /* Add more space at the top */
     }
 }
 
 /* For screens smaller than 480px (mobile devices) */
 @media screen and (max-width: 480px) {
+    .hero {
+        height: 40vh; /* Further reduce height on small mobile screens */
+    }
+
+    .hero-logo {
+        width: 35vw; /* Even smaller logo width */
+        max-width: 100px;
+    }
+
     .hero .heading {
-        font-size: 2rem; /* Even smaller heading */
+        font-size: 1.5rem;
     }
 
     .hero .subheading {
-        font-size: 1rem; /* Even smaller subheading */
+        font-size: 0.85rem;
     }
 
     .hero .description {
-        font-size: 0.85rem; /* Even smaller description */
+        font-size: 0.75rem;
     }
 
     .hero .content {
-        padding: 10px; /* Reduced padding */
+        padding-top: 50px; /* Increase padding-top for very small screens */
     }
 }
 
@@ -253,6 +304,70 @@ html, body {
     width: 100%;              /* Make video full width */
     height: 60vh;             /* Increase height to make it taller */
     max-height: 600px;        /* Set a max height to prevent it from being too tall */
+}
+
+/* Responsive Styles */
+
+/* For screens larger than 768px */
+@media (min-width: 768px) {
+    .video-container {
+        max-width: 800px;  /* Reduce max-width for narrower video */
+        padding: 0;        /* Remove padding for better alignment */
+    }
+
+    .video {
+        height: 65vh;      /* Increase height for larger screens */
+    }
+
+    .venue-text, .link-with-icon {
+        font-size: 1.2rem; /* Increase font size for better readability */
+    }
+
+    .link-with-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .video-container {
+        padding: 0 10px;   /* Add padding for smaller screens */
+    }
+
+    .video {
+        height: 50vh;      /* Set a taller height for smaller screens */
+    }
+
+    .venue-text, .link-with-icon {
+        font-size: 1rem;   /* Adjust font size for smaller screens */
+    }
+
+    .link-with-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* For very small screens (max-width 480px) */
+@media (max-width: 480px) {
+    .video-container {
+        max-width: 100%;   /* Full width for very small screens */
+        padding: 0 5px;    /* Reduce padding */
+    }
+
+    .video {
+        height: 45vh;      /* Set a proportional height for very small screens */
+    }
+
+    .venue-text, .link-with-icon {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .link-with-icon svg {
+        width: 14px;
+        height: 14px;
+    }
 }
 
 /* Flex container for venue text and link */
@@ -292,69 +407,7 @@ html, body {
     fill: currentColor; /* Inherit color from the link */
 }
 
-/* Responsive Styles */
 
-/* For screens larger than 768px */
-@media (min-width: 768px) {
-    .video-container {
-        max-width: 800px;  /* Reduce max-width for narrower video */
-        padding: 0;        /* Remove padding for better alignment */
-    }
-
-    .video {
-        height: 65vh;      /* Slightly increase height for larger screens */
-    }
-
-    .venue-text, .link-with-icon {
-        font-size: 1.2rem; /* Increase font size for better readability */
-    }
-
-    .link-with-icon svg {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-/* For screens smaller than 768px */
-@media (max-width: 768px) {
-    .video-container {
-        padding: 0 10px;   /* Add padding for smaller screens */
-    }
-
-    .video {
-        height: 50vh;      /* Maintain taller height for smaller screens */
-    }
-
-    .venue-text, .link-with-icon {
-        font-size: 1rem;   /* Adjust font size for smaller screens */
-    }
-
-    .link-with-icon svg {
-        width: 16px;
-        height: 16px;
-    }
-}
-
-/* For very small screens (max-width 480px) */
-@media (max-width: 480px) {
-    .video-container {
-        max-width: 100%;   /* Full width for very small screens */
-        padding: 0 5px;    /* Reduce padding */
-    }
-
-    .video {
-        height: 45vh;      /* Maintain proportional height for very small screens */
-    }
-
-    .venue-text, .link-with-icon {
-        font-size: 0.9rem; /* Smaller font size */
-    }
-
-    .link-with-icon svg {
-        width: 14px;
-        height: 14px;
-    }
-}
 
 /* Styling for the enhanced heading */
 .heading {
