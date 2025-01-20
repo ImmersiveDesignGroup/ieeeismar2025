@@ -1,3 +1,8 @@
+/* Variables */
+:root {
+    --nav-height: 70px; /* Navbar height */
+}
+
 /* Centered content for main sections */
 .center-content {
     display: flex;
@@ -20,7 +25,7 @@ body {
     top: 0;                 /* Stick to the top */
     width: 100%;            /* Full width */
     z-index: 1000;          /* Bring it to the front */
-    height: 70px;           /* Set a specific height for the navbar */
+    height: var(--nav-height);           /* Set a specific height for the navbar */
     display: flex;          /* Use flexbox for layout */
     align-items: center;    /* Center items vertically */
     padding: 0 20px;        /* Padding on the sides */

@@ -35,11 +35,10 @@ body {
     position: absolute;
     top: 50%; /* Centers text vertically */
     left: 50%; /* Centers text horizontally */
-    transform: translate(-50%, -50%); /* Adjusts for perfect centering */
+    transform: translate(-50%, calc(-50% + (var(--nav-height) / 2))); /* Adjusts for perfect centering */
     text-align: center; /* Centers text within the div */
     color: white; /* Makes text white for visibility */
     font-family: 'Poppins', sans-serif;
-
 }
 
 .hero-text h1 {
