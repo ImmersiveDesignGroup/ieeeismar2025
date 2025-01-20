@@ -446,7 +446,7 @@ table tbody tr:nth-child(even) {
     grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
     gap: 20px;
     justify-items: center;
-    
+    align-items: center;
 }
 
 .sponsors-grid img {
@@ -457,7 +457,7 @@ table tbody tr:nth-child(even) {
 }
 
 .sponsors-grid img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
