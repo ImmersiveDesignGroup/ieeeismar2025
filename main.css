@@ -121,13 +121,19 @@ body {
 /* Ensuring names below each image are aligned */
 .chairs p {
     font-size: 16px;
-    font-weight: bold;
     text-align: center;
-    margin-top: 15px; /* Adds space between image and text */
+    margin: 3px 0; /* Adds space between image and text */
     width: 200px; /* Same width as images for consistent alignment */
     font-family: 'Poppins', sans-serif;
-    white-space: nowrap; /* Prevents text from wrapping to the next line */
+    font-weight: 400;
+}
 
+.chairs p.name {
+    font-weight: bold;
+}
+
+.chairs img {
+    margin-bottom: 10px; /* Adds space between image and name */
 }
 
 /* Category header style */
